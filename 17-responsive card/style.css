@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:aquamarine;
+}
+
+.wrapper{
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    row-gap: 10px;
+    padding: 15px;
+    transition: all .4s ease 0s;
+}
+
+.card:hover{
+    transform: translate3D(0,10px,0px) scale(1.02);
+    box-shadow: 2px 2px black;
+}
+
+.card #name{
+    margin: 10px 0;
+    font-weight: 1000;
+    color: purple;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card #description{
+    font-size: 13px;
+    font-weight: 100;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img{
+    border-radius: 100px;
+    border: 4px solid purple;
+}
+
+.button{
+    display:flex;
+    column-gap: 10px;
+}
+
+button{
+    width: auto;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button #read-more{
+    color: rgb(0, 128, 0,1);
+    border: 2px solid green;
+    background-color: rgb(255, 255, 255,1);
+    transition: all 0.3s ease 0s;
+}
+
+.button #read-more:hover{
+    background-color:rgb(255, 255, 255,0.8);
+    box-shadow: 2px 2px black;
+}
+
+.button #subscribe{
+    color: rgb(255, 255, 255,1);
+    background-color: green;
+    transition: all 0.3s ease 0s;
+}
+
+.button #subscribe:hover{
+    /* background-color:rgb(255, 255, 255,0.8); */
+    box-shadow: 2px 2px black;
+}

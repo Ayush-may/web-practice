@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>Document</title>
+</head>
+<body >
+    <div class="center">
+        <h1>Enter your Phone Number</h1>
+        <hr>
+        <b>Enter Number (+91)  :</b>    <input type="number" value="9386982025" name="Telephone Number" /> <br>
+        <input type="submit" style="margin-top: 10px;" onclick="clicked(event)" />
+        <script>
+            function clicked(e){
+                if(confirm('Successfully uploaded')) {
+                    e.preventDefault();
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.wrapper{
+    width: 1900px;
+    height: 950px;
+    background-color: turquoise;
+}
+.first-section{
+    width: auto;
+    height: 50px;
+    background-color: grey;
+}
+.second-section{
+    width: auto;
+    height:290px;
+    background-color: grey;
+    margin-top: 10px;
+}
+.third-section{
+    width: auto;
+    height:210px;
+    background-color: grey;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.big-1{
+    background-color: grey;
+    margin-left: 50px;
+    margin-top: 40px;
+    height: 210px;
+    width:1400px;
+    float: left;
+}
+.big-2{
+    background-color: grey;
+    width: 350px;
+    height: 210px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    float: left; 
+}
+.footer{
+    background-color: grey;
+    width: auto;
+    margin-top: 270px;
+    height:100px
+}

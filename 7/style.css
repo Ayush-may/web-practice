@@ -1,0 +1,71 @@
+body{
+    background-color: #FF5733;
+}
+.parent{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 200px;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 100px;
+    top: 150px;
+    z-index: 1;
+}
+.member{
+    margin-top: 80px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.username{
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+}
+.password{
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+}
+.button{
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #337AFF;
+}
+.button:hover{
+    background-color: #1b68f9;
+}
+.forget{
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.parent input{
+    border: 2px solid black;
+    border-radius: 10px;
+}

@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+}
+nav{
+    width: 100%;
+    position: fixed;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 40px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 40px;
+}
+li{
+    float: left;
+    border-right: 1px solid white;
+}
+a{
+    display: block;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+
+}
+a:hover{
+    background-color: red;
+}

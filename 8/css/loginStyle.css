@@ -1,0 +1,94 @@
+body{
+    background-color:#5490ff;
+}
+.wrapper{
+    width: 400px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.container{
+    background-color: white;
+    margin-top: 100px;
+    box-shadow: 10px 10px;
+    border-radius: 10px;
+}
+p{
+    text-align: center;
+
+}
+input{
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 20px;  
+    display: block;
+    border-style:dotted;
+    border-radius: 10px;
+    padding-left: 10px;
+    /* box-shadow: 2px 2px; */
+}
+button{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 40px;
+}
+#loginText{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+}
+#donttext{   
+    margin: 0%;   
+}
+#dontSpanText{
+    
+    display: inline;
+}
+#signUpText{
+    margin-top: 0%;
+}
+#loginButton{
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(84, 108, 248);
+}
+#loginButton:hover{
+    background-color: rgb(64, 89, 226);
+}
+#faceBookButton{
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(53, 74, 190);
+}
+#faceBookButton:hover{
+    background-color: rgb(44, 62, 169);
+}
+#googleButton{
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+    background-color: rgb(255, 255, 255);
+}
+.whiteSpace{
+    height: 10px;
+}
+a{
+    text-decoration: none;
+}
+#orText{
+    position: relative;
+}
+#orText::before{
+    content: "";
+    width: 150px;
+    height: 1px;
+    margin-left: 35px;
+    background: black;
+    display: block;
+}

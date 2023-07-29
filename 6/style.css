@@ -1,0 +1,120 @@
+.wrapper{
+    width: 600px;
+    height: 500px;
+    border: 5px solid black;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* margin: 0 auto; */
+}
+.ImageBack{
+    margin-left: 150px;
+    margin-bottom: 0px;
+    display: block;
+}
+.wrapper p{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+#userNameText{
+    float: left;
+}   
+#passWordText{
+    float: left;
+}
+.center{
+    margin-left: 60px;
+}
+.inputArea{
+    display: block;
+    width: 300px;
+    height: 30px;
+    font-size: 17px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 2px solid black;
+}
+.inputArea-1{
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    padding-left: 10px;
+    border: 2px solid black;
+}
+.userNameArea{
+    margin-bottom: 20px;   
+}
+#logInButton{
+    margin-top: 20px;
+    width: 430px;
+    height: 40px;
+    border: 0px;   
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(73, 147, 251);
+    margin-left: 9px;
+}
+#logInButton:hover{
+    background-color: rgb(48, 121, 224);   
+}
+#orText{
+    margin-left: 210px;
+    position: relative;
+}
+#orText::before{
+    content: "";
+    width: 190px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -60%;
+}
+#orText::after{
+    content: "";
+    width: 200px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 32%;
+}
+#CreateButton{
+    margin-top: 5px;
+    width: 430px;
+    height: 40px;
+    border: 0px;   
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(73, 147, 251);
+    margin-left: 9px;   
+}
+#CreateButton:hover{
+    background-color: rgb(48, 121, 224);
+}
+#forgetText{
+    font-size: 17px;
+    margin-top: -2.5%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 140px;
+    text-decoration: none;
+}
