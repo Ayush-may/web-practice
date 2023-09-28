@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular Http Practice</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;		
+	}
+	table{
+		border-collapse: collapse;
+	}
+	th ,td{
+		padding: 10px;
+	}
+</style>
+<body ng-app="app" ng-controller="ctrl">
+<Table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Roll no</th>
+		<th>Percentage</th>
+	</tr>
+	<tr ng-repeat="student in students">
+		<td>{{student.Name}}</td>
+		<td>{{student.RollNo}}</td>
+		<td>{{student.Percentage}}</td>
+	</tr>
+</Table>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script type="text/javascript">
+	angular.module('app',[])
+	.controller('ctrl', function($scope,$http){
+		
+		$http.get("\data.txt").then(function(r){
+			$scope.students = r.data;
+		},
+		function (error){
+			console.log(error);	
+		});
+	})
+</script>
+</body>
+</html>

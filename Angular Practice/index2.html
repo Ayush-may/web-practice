@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<title>Angular Table Practice</title>
+</head>
+<style>
+  	table tr:nth-child(odd) {
+     	background-color: #f2f2f2;
+   	}
+  	table tr:nth-child(even) {
+     	background-color: #ffffff;
+  	}
+	table, tr, td{
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 5px;
+	}
+</style>
+<body ng-app="app" ng-controller="ctrl">
+<div class="container">
+	<table border="1">
+		<tr>
+			<td>First Name :</td>
+			<td> 
+				<input type="text" name="firstName" ng-model="student.firstName">
+			</td>
+		</tr>		
+		<tr>
+			<td>Last Name :</td>
+			<td>
+				<input type="text" name="lastName" ng-model="student.lastName">
+			</td>
+		</tr>
+		<tr>
+			<td>Details</td>
+			<td>
+				<table border="1">
+					<tr>
+						<td>First Name :</td>
+						<td>{{student.firstName}}</td>
+					</tr>	
+					<tr>
+						<td>Last Name :</td>
+						<td>{{student.lastName}} </td>
+					</tr>
+				</table>				
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script>
+	var app = angular.module('app',[]);
+	app.controller('ctrl', function($scope){
+
+	})
+</script>
+</body>
+</html>

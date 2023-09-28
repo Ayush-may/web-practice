@@ -1,0 +1,43 @@
+body{
+	background-color: palegreen;
+}
+
+#container{
+
+	padding: 30px;
+	width: 600px;
+	position: fixed;
+	left: 50%;
+	top: 20%;
+	transform: translate(-50%);
+}
+p{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style: none;
+	font-weight: bold;
+}
+li{
+	margin-bottom: 10px;
+}
+#closeSign{
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	cursor: pointer;
+}
+#priceTag{
+	position: absolute;
+	right: 100px;
+	top: 15px;
+}
+td{
+	vertical-align: middle;
+}
+
+table{
+	border-color: palegreen;
+	border-collapse: collapse;
+}
