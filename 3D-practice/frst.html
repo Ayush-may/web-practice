@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            transform-style: preserve-3d;
+            /* transform: rotateX(-15deg) rotateY(70deg); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: gray; */
+            transition: 2s;
+            position: relative;
+
+            /* animation: orbit 2s linear infinite; */
+        }
+
+        .card > div:nth-child(1){
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            font-size: 2rem;
+            color: aqua;
+            background-color: beige;
+            border: 1px solid black;
+            transform: translateZ(100px);
+            /* backface-visibility:hidden; */
+        }
+
+        .card > div:nth-child(2){
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 10px solid green;
+            transform: rotateY(180deg);
+        }
+
+        .card > div:nth-child(2) *{
+            backface-visibility: hidden;
+        }
+
+        .card > div:nth-child(2)::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: yellow;
+            z-index: -1;
+            /* backface-visibility: hidden; */
+        }
+
+        .card:hover{
+            transform: rotateY(180deg);
+        }
+
+        @keyframes orbit{
+            from{
+                transform:  rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div>Ayush Sharma</div>
+            <div>Hello Motherfucker !!</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        user-select: none;
+        overflow: hidden;
+    }
+    h1{
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .controller-container{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 10%;
+        right: 1rem;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+        background-color: rgb(223, 223, 223);
+        border: 1px solid black;
+    }
+
+    .controller-container div{
+        margin: 5px 0 5px 0;
+    }
+
+    input[ type="text" ]{
+        width: 2rem;
+        height: 1.5rem;
+    }
+
+    h5{
+        margin: 0.5rem;
+        font-size: 2rem;
+        font-weight: normal;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1 >FireBall using HTML and JavaScript</h1>
+    <div class="controller-container">
+        <h5>Control Panel</h5>
+        <div>
+            <label for="">Radius : </label> 
+            <input type="range" id="radiusBar" value="5" max="100" min="5" step="5">
+            <input type="text" id="radiusCountText" readonly>
+        </div>
+        <div>
+            <label for="">Particle : </label> 
+            <input type="range" id="particleBar" value="50" max="2000" min="10" step="10">
+            <input type="text" id="particleCountText" readonly>
+        </div>
+        <div>
+            <label for="">Gravity : </label> 
+            <input type="range" id="gravityBar" value="0.4" min="0.01" step="0.05" max="0.9">
+            <input type="text" id="gravityCountText" readonly>
+        </div>
+        <div>
+            <label for="">Frictionless : </label> 
+            <input type="range" id="frictionBar" min="0.1" value="0.99" step="0.1" max="2">
+            <input type="text" id="frictionCountText" readonly>
+        </div>
+        <div>
+            <label for="">Power : </label> 
+            <input type="range" id="powerBar" min="5" value="10" step="5" max="100">
+            <input type="text" id="powerCountText" readonly>
+        </div>
+        <div>
+            <Label>background :<Label>
+            <input type="radio" id="white" name="black" value="white"> <Label for="white">white</Label>
+            <input type="radio" id="black" name="black" value="black" checked> <Label  for="black">black</Label>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="Circle.js" ></script>
+    <script>
+        const color = document.getElementById('black');
+        const canvas = document.getElementById('canvas');
+        const particleBar = document.getElementById('particleBar');
+        const radiusBar = document.getElementById('radiusBar');
+        const powerBar = document.getElementById('powerBar');
+        const c = canvas.getContext('2d');
+        var particleCount = 200;
+        var power = undefined;
+        var particleArray = undefined;
+        var isBlack = undefined;
+        var radius = undefined;
+        // var gravity = undefined;
+
+        function init(){
+            document.getElementById('powerCountText').value = powerBar.value;
+            document.getElementById('radiusCountText').value = radiusBar.value;
+            document.getElementById('gravityCountText').value = gravityBar.value;
+            document.querySelector('h1').style.color = 'white';
+            document.getElementById('particleCountText').value = particleBar.value;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particleArray = [];
+            isBlack = color;
+            radius = radiusBar.value;
+            power = Number(powerBar.value);
+            // gravity = gravityBar.value;
+        }
+
+        powerBar.addEventListener('input',()=>{
+            power = Number(powerBar.value);
+            document.getElementById('powerCountText').value = powerBar.value;
+        })
+
+        particleBar.addEventListener('input',()=>{
+            particleCount = particleBar.value;
+            document.getElementById('particleCountText').value = particleCount;
+        })
+
+        //radiusBar 
+        radiusBar.addEventListener('input',()=>{
+            radius = radiusBar.value;
+            document.getElementById('radiusCountText').value = radiusBar.value;
+        });
+
+        //Black
+        color.addEventListener('input',()=>{
+            document.querySelector('h1').style.color = 'white';
+            isBlack = color.checked;
+        })
+
+        //White 
+        document.getElementById('white').addEventListener('input',()=>{
+            document.querySelector('h1').style.color = 'black';
+            isBlack = color.checked;
+        });
+
+        //GravityBar
+        // gravityBar.addEventListener('input',()=>{
+        //     gravity = gravityBar.value;
+        //     document.getElementById('gravityCountText').value = gravity;
+        // })
+
+        var mouse = {
+            x: undefined,
+            y: undefined
+        }
+
+        canvas.addEventListener('click',(event)=>{
+            mouse.x = event.clientX;
+            mouse.y = event.clientY;
+
+            var angleIncrement = (Math.PI*2) / particleCount;
+
+            for(var i=0;i<particleCount;i++){
+                let temp = `hsl(${Math.random()*i},50%,50%)`;
+                particleArray.push( new Circle(c,mouse,radius,temp,{
+                    x : (Math.cos(angleIncrement * i) * Math.random()) * power,
+                    y : Math.sin(angleIncrement * i) * Math.random() * power
+                }) );
+            }
+        })
+
+        window.addEventListener('resize', ()=>{
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        function animate(){
+            requestAnimationFrame(animate);
+            // c.clearRect(0,0,innerWidth,innerHeight);
+       
+            if(isBlack){
+                c.fillStyle = 'rgba(0,0,0,0.1)';
+            }
+            else{
+                c.fillStyle = 'rgba(255,255,255,0.1)';
+            }
+            c.fillRect(0,0,canvas.width,canvas.height);
+
+
+            particleArray.forEach((element,index) => {
+                if(element.alpha > 0){
+                    element.update();
+                }
+                else{
+                    particleArray.splice(index,1)
+                }
+            });
+        }
+
+        init();
+        animate();
+
+    </script>
+
+</body>
+</html>

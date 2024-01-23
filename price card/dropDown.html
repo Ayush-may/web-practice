@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down Practice</title>
+</head>
+<style>
+    .dropDown{
+        position: relative;
+    }
+    .dropDown Button{
+        background-color: rgb(224, 224, 224);
+        color: black;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropDown:hover .content{
+        display: block;
+    }
+
+    .dropDown a{
+        color: black;
+        font-size: 12px;
+        display: flex;
+        padding: 4px 4px;
+        background-color: rgb(224, 224, 224);
+        text-decoration: none;
+    }
+
+    .dropDown a:hover{
+        background-color: rgb(208, 208, 208);
+    }
+
+    .dropDown .content{
+        display: none;
+        width: auto ;
+        position: absolute;
+        
+    }
+</style>
+<body>
+    <div class="dropDown">
+        <Button>Fruits</Button>
+        <div class="content">
+            <a href="#">Apple</a>
+            <a href="#">Banana</a>
+            <a href="#">Mango</a>
+        </div>
+    </div>
+
+</body>
+</html>

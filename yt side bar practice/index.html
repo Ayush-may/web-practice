@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/youtube-sans" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Side bar | YouTube</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-container">
+            <div class="logo-side">
+                <i class="fa-solid fa-bars fa-sm" id="displaySideBtn" style="color: #ffffff;"></i>
+                <div class="youtube-logo-side">
+                    <img src="youtube.png" >
+                    <p>YouTube</p>
+                </div>
+                
+                <div class="nav-search-side">
+                    <input type="search" placeholder="search" >
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+
+                    <div class="mic-side">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+                            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                          </svg>
+                    </div>
+                </div>
+                
+                <div class="user-right-side">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg>
+                </div>
+
+            </div>
+
+            <div class="side-bar-container  " id="sideBar">
+                <!-- <div class="hidden-div" ></div> -->
+                <div class="side-home">
+                    <ul>
+                        <li> 
+                            <img src="assets/home.svg"  />
+                            <p> Home</p>
+                        </li>
+                        <li> 
+                            <img src="assets/shorts.svg" />
+                            <p> Shorts</p>
+                        </li>
+                        <li> 
+                            <img src="assets/subscribers.svg" />
+                            <p> Subscribers</p>
+                        </li>
+                    </ul>
+                </div>
+       
+                <div class="side-bar-divider" ></div>
+       
+                <div class="side-library">
+                    <ul>
+                        <li> 
+                            <img src="assets/library.svg" />
+                            <p> Library</p>
+                        </li>
+                        <li> 
+                            <img src="assets/history.svg" />
+                            <p> History</p>
+                        </li>
+                        <li> 
+                            <img src="assets/your-videos.svg" />
+                            <p> Your Videos</p>
+                        </li>
+                        <li> 
+                            <img src="assets/watch-time.svg" />
+                            <p> Watch Later</p>
+                        </li>
+                        <li> 
+                            <img src="assets/download.svg" />
+                            <p> Downloads</p>
+                        </li>
+                        <li> 
+                            <img src="assets/likes-videos.svg" />
+                            <p> Liked Videos</p>
+                        </li>
+                        <li id="showMoreBtn"> 
+                            <img src="assets/down-btn.svg" />
+                            <p> Show More</p>
+                        </li>
+                    </ul>
+                </div>   
+                
+                <div class="side-bar-divider" ></div>
+
+                <div class="side-subsriber">
+                    <p class="subscriber-text">Subscriptions</p>
+                    <ul>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Alan Becker</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Dojo2000</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Hyun's Dojo</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Youtube</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Alan Becker</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Dojo2000</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Hyun's Dojo</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Youtube</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Alan Becker</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Dojo2000</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Hyun's Dojo</p>
+                        </li>
+                        <li>
+                            <div class="subscriber-profile"></div>
+                            <p>Youtube</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-container">
+            <!-- JavaScript is Working here -->
+            <div class="category-inner-container" id="category-inner-div"></div>
+        </div>
+
+        <div class="video-card-container">
+            <div class="video-card-inner-container">
+                
+                <div class="card-body">
+                    <div class="card-thumbnail">
+                        
+                    </div>
+                    <div class="card-title">
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-thumbnail">
+                        
+                    </div>
+                    <div class="card-title">
+
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="card-thumbnail">
+                        
+                    </div>
+                    <div class="card-title">
+
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="card-thumbnail">
+                        
+                    </div>
+                    <div class="card-title">
+
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="card-thumbnail">
+                        
+                    </div>
+                    <div class="card-title">
+
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="card-thumbnail">
+                        
+                    </div>
+                    <div class="card-title">
+
+                    </div>
+                </div>
+                
+
+          
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js" type="text/javascript" ></script>
+</body>
+</html>

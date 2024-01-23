@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: rgba(255, 84, 84, 1);
+    }
+</style>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        var c = canvas.getContext('2d');
+
+        function Circle(x,y,radius,dx,dy,gravity,acc){
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.dx = dx;
+            this.dy = dy;
+            this.gravity = gravity;
+            this.acc = acc;
+
+            this.draw = ()=>{
+                c.beginPath();
+                c.fillStyle = "black";
+                c.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+                c.fill();
+            }
+
+            this.update = ()=>{
+                if( (this.y+this.radius*2) > window.innerHeight || this.y < 0){
+                    this.dy = -this.dy;
+                }
+
+                if( this.x+(this.radius*2) > window.innerWidth || this.x < 0){
+                    this.dx = -this.dx;
+                }
+            
+                this.x += this.dx;
+                this.dy += this.acc + this.gravity;
+                this.y += this.dy;    
+
+                this.draw();
+            }
+        }
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        var circleArray = [];
+
+        for(i=0;i<100;i++){
+            var x = Math.random()*window.innerWidth;
+            var y = Math.random()*window.innerHeight;
+            var radius = 50;
+            var dy = Math.random() * 50;
+            var dx = Math.random() * 50;
+            var gravity = 2;
+            var acc = 1;
+
+            circleArray.push(new Circle(x,y,radius,dx,dy,gravity,acc));
+        }
+
+        var cnt = 0;
+        var cnt2 = 0;
+        var cnt3 = 0;
+        var cnt4 = 0;
+        var radius = 50;
+        
+
+        function animate(){
+            requestAnimationFrame(animate);
+            
+            // c.fillStyle = "rgba(255,255,255,0.05)";
+            // c.fillRect(0,0,canvas.width,canvas.height);
+            c.clearRect(0,0,innerWidth,innerHeight);
+
+
+            c.beginPath();
+            c.fillStyle = 'black'
+            c.arc(((Math.cos(cnt2) *1500) + window.innerWidth/2)+100, (Math.sin(cnt2) *550) + window.innerHeight/2 ,radius+40,0 , Math.PI*2,false);
+            c.fill();
+            c.beginPath();
+            c.fillStyle = 'blue'
+            c.arc(((Math.cos(cnt3) *1300) + window.innerWidth/2)+500, (Math.sin(cnt3) *450) + window.innerHeight/2 ,radius+10,0 , Math.PI*2,false);
+            c.fill();
+            c.beginPath();
+            c.fillStyle = 'black'
+            c.arc(((Math.cos(cnt4) *1100) + window.innerWidth/2)+200, (Math.sin(cnt4) *350) + window.innerHeight/2 ,radius,0 , Math.PI*2,false);
+            c.fill();
+            c.beginPath();
+            c.fillStyle = 'black'
+            c.arc(((Math.cos(cnt) *1000) + window.innerWidth/2)+400, (Math.sin(cnt) *350) + window.innerHeight/2,radius-10,0 , Math.PI*2,false);
+            c.fill();
+            c.beginPath();
+            c.fillStyle = 'black'
+            c.arc((Math.cos(cnt) *800) + window.innerWidth/2, (Math.sin(cnt) *250) + window.innerHeight/2,radius-20,0 , Math.PI*2,false);
+            c.fill();
+            c.beginPath();
+            c.fillStyle = 'yellow'
+            c.arc(window.innerWidth/2, window.innerHeight/2,200,0 , Math.PI*2,false);
+            c.fill();
+            
+            cnt += 0.04;
+            cnt3 += 0.02;
+            cnt4 += 0.03;
+            cnt2 += 0.01;
+
+            // circleArray.forEach(element => {
+            //     element.update();
+            // });
+
+            // console.log(Math.sin(cnt++)* 100)
+        }
+
+        animate();
+    </script>
+</body>
+</html>

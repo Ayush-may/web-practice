@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: azure;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container > div{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card{
+    width: 100px;
+    overflow: hidden;
+    height: 600px;
+    border-radius: 10rem;
+    box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.2);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+    border-radius: 1rem;
+    width: 800px;
+}
+
+img{
+    width: 800px;
+    height: 600px;
+    object-position: center;
+    object-fit: cover;
+}

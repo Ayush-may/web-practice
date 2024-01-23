@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" >
+    <title>Machine Gun</title>
+</head>
+<body>
+    
+    <h1 id="liveId">Lives : <span id="liveSpanId">3</span></h1>
+    <h1 id="scoreIDD">Score : <span id="scoreid"></span></h1>
+    
+    <canvas id="canvas"></canvas>
+
+    <div class="gameStartModel" id="gameStartModel">
+        <div class="gameStart-details">
+            <div class="gameStart-text">Welcome to Machine-Gun Game 
+                <span>Note: Please Zoom out ur browser screen for better mouse movement and playing experience</span>
+                <span>Select Difficulty</span>
+            </div>
+            <div class="gameStart-btns">
+                <button type="button" class="diff-btn">Easy</button>
+                <button type="button" class="diff-btn">Medium</button>
+                <button type="button" class="diff-btn">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gameOverModal" id="gameOverModal">
+        <div class="gameOverDes">
+            <h1>Highest Score : <span id="scoreidModal"></span></h1>
+            <div>
+                <button class="playAgainModal" id="playAgainModal" >Play Again</button>
+                <button class="playAgainModal" id="startOverBtn" >Start Over ?</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Particle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Enemy.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

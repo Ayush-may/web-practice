@@ -1,0 +1,33 @@
+<div ng-controller="ctrl">
+	<p class="h1 text-center">Add Quiz</p>
+	<hr>
+	<form>
+		<div class="form-group">
+			<div class="card">
+				<div class="card-header ">
+					<p class="h3 text-dark fw-bold">Add Quiz</p>
+				</div>
+				<div class="card-body">
+					<input type="text" class="col-12 form-control-sm form-control" ng-model="authorNameInput" placeholder="Enter Author Name">
+					<div class="row position-relative">
+						<div class="col">
+							<input type="text" class="form-control form-control-sm" ng-model="typeInput" ng-keyup="checKInput()" placeholder="Type">
+						</div>
+						<small class="text-danger position-absolute" ng-hide="hideThis" style="font-size: 10px;bottom: -15px;">*fill all box</small>
+					</div>					
+					<div class="row d-none">
+						<div class="col-6">
+							<input type="text" class="form-control form-control-sm" ng-model="noOfQueInput" ng-keyup="checKInput()" placeholder="Number of Questions ?">
+						</div>
+					</div>				
+					<div class="row justify-content-end">
+						<div class="col-2">
+							<a href="#!/addQuestions" > <button type="button" class="btn btn-outline-primary btn-sm mt-3 " ng-disabled="disableFlag" ng-click="addAuthor()" id="createQuizBtn">Next</button>	 </a>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer"></div>
+			</div>
+		</div>
+	</form>
+</div>

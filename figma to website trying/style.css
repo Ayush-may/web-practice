@@ -1,0 +1,242 @@
+.desktop {
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .desktop .div {
+    background-color: #e8e8e8;
+    overflow: hidden;
+    width: 1440px;
+    height: 2134px;
+    position: relative;
+  }
+  
+  .desktop .frame {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1010px;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 100px 100px;
+    position: absolute;
+    top: 1210px;
+    left: 215px;
+  }
+  
+  .desktop .rectangle {
+    position: relative;
+    width: 455px;
+    height: 428px;
+  }
+  
+  .desktop .overlap {
+    position: absolute;
+    width: 1442px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+  }
+  
+  .desktop .group {
+    position: absolute;
+    width: 1442px;
+    height: 506px;
+    top: 0;
+    left: 0;
+  }
+  
+  .desktop .overlap-group {
+    position: relative;
+    width: 1440px;
+    height: 506px;
+    background-image: url(./img/rectangle-1.png);
+    background-size: 100% 100%;
+  }
+  
+  .desktop .fight-a-champian {
+    position: absolute;
+    width: 585px;
+    top: 124px;
+    left: 153px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 101.2px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop .text-wrapper {
+    color: #ffffff;
+  }
+  
+  .desktop .span {
+    color: #e73538;
+  }
+  
+  .desktop .group-2 {
+    position: absolute;
+    width: 970px;
+    height: 481px;
+    top: 503px;
+    left: 235px;
+  }
+  
+  .desktop .group-3 {
+    position: absolute;
+    width: 970px;
+    height: 378px;
+    top: 0;
+    left: 0;
+  }
+  
+  .desktop .img {
+    position: absolute;
+    width: 394px;
+    height: 371px;
+    top: 7px;
+    left: 0;
+  }
+  
+  .desktop .group-4 {
+    position: absolute;
+    width: 480px;
+    height: 362px;
+    top: 0;
+    left: 494px;
+  }
+  
+  .desktop .how-to-become-a {
+    position: absolute;
+    width: 476px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 43.3px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop .text-wrapper-2 {
+    color: #000000;
+  }
+  
+  .desktop .learn-the-basics-of {
+    position: absolute;
+    width: 393px;
+    top: 123px;
+    left: 1px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-grey);
+    font-size: 16.5px;
+    letter-spacing: 1.65px;
+    line-height: 21.7px;
+  }
+  
+  .desktop .overlap-group-wrapper {
+    position: absolute;
+    width: 268px;
+    height: 58px;
+    top: 423px;
+    left: 352px;
+  }
+  
+  .desktop .sign-up-wrapper {
+    position: relative;
+    width: 266px;
+    height: 58px;
+    background-color: #e73538;
+    border-radius: 10px;
+  }
+  
+  .desktop .sign-up {
+    position: absolute;
+    height: 37px;
+    top: 10px;
+    left: 80px;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #f5f5f5;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    line-height: 37px;
+    white-space: nowrap;
+  }
+  
+  .desktop .screen-size-guide {
+    position: absolute;
+    width: 1440px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+    border: 2px solid;
+    border-color: #000000;
+  }
+  
+  .desktop .overlap-wrapper {
+    position: absolute;
+    width: 1442px;
+    height: 394px;
+    top: 1740px;
+    left: 0;
+  }
+  
+  .desktop .ready-for-your-next-wrapper {
+    position: relative;
+    width: 1440px;
+    height: 394px;
+    background-image: url(./img/rectangle-2.svg);
+    background-size: 100% 100%;
+  }
+  
+  .desktop .ready-for-your-next {
+    position: absolute;
+    top: 90px;
+    left: 160px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop .text-wrapper-3 {
+    color: #f5f5f5;
+  }
+  
+  .desktop .group-5 {
+    position: absolute;
+    width: 268px;
+    height: 65px;
+    top: 1072px;
+    left: 587px;
+  }
+  
+  .desktop .our-home {
+    position: absolute;
+    width: 266px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 48.7px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop .line {
+    position: absolute;
+    width: 265px;
+    height: 5px;
+    top: 60px;
+    left: 0;
+  }
+  

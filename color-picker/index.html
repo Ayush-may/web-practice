@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Picker</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .container{
+            width: 100vw;
+            height: 50vh;
+            display: grid;
+            /* place-items: center; */
+            place-content: center;
+        }
+        input{
+            width: 200px;
+            height: 50px;
+        }
+        #color_id{
+            width: fit-content;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 2rem;
+            place-self: center;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <div id="color_id">Ayush</div>
+        <input type="color" id="color" placeholder="Color" value="#5DADE2" >
+    </div>
+    <script>
+        document.getElementById('color_id').innerText = `${document.getElementById('color').value}`;
+        document.getElementById('body').style.backgroundColor = `${document.getElementById('color').value}`;
+        document.getElementById('color').addEventListener('input',()=>{
+            document.getElementById('color_id').innerText = `${document.getElementById('color').value}`;
+            document.getElementById('body').style.backgroundColor = `${document.getElementById('color').value}`;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- Inspired by Mini -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader Practice</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .loader{
+            aspect-ratio: 1/1;
+            width: 10px;
+            background-color: transparent;
+            border: 2px solid silver;
+            border-radius: 50%;
+            border-top: 2px solid grey;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate{
+            to{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+</body>
+</html>

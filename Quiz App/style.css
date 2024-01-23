@@ -1,0 +1,18 @@
+body{
+	background-color: #FFE4E1;
+}
+
+nav{
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+input{
+	margin-top: 0.5rem;
+}
+#view{
+	width: 90vh;
+	height: auto;
+}
